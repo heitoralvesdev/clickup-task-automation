@@ -1,6 +1,6 @@
 import requests
 
-# Simulando criação de tarefa no ClickUp via API
+# Simulating task creation in ClickUp via API
 url = "https://api.clickup.com/api/v2/list/123456/task"
 
 headers = {
@@ -18,6 +18,6 @@ data = {
 response = requests.post(url, json=data, headers=headers)
 
 if response.status_code == 200 or response.status_code == 201:
-    print("Tarefa criada com sucesso!")
+    print("Task created successfully!")
 else:
-    print("Erro ao criar tarefa:", response.text)
+    print("Error creating task:", response.text)
